@@ -6,10 +6,20 @@ use yii\helpers\Json;
 use Yii;
 
 /**
- * This is just an example.
+ * Advanced JSON-logger for Yii2
  */
 class Log extends \Yii
 {
+    /**
+     *
+     * Logs error message
+     *
+     * @param  string  $message  Message to be logged
+     * @param  array   $add      Information to be atteched to the message
+     * @param  array   $category Category of the message
+     * @return void
+     *
+     */
     public static function error($message, $add = array(), $category = 'System')
     {
     	$data['type'] = (php_sapi_name() == 'cli' ? 'console' : 'web');
@@ -25,6 +35,16 @@ class Log extends \Yii
         parent::error($json, $category);
     }
 
+    /**
+     *
+     * Logs warning message
+     *
+     * @param  string  $message  Message to be logged
+     * @param  array   $add      Information to be atteched to the message
+     * @param  array   $category Category of the message
+     * @return void
+     *
+     */
     public static function warning($message, $add = array(), $category = 'System')
     {
         $data['type'] = (php_sapi_name() == 'cli' ? 'console' : 'web');
@@ -40,6 +60,16 @@ class Log extends \Yii
         parent::warning($json, $category);
     }
 
+    /**
+     *
+     * Logs info message
+     *
+     * @param  string  $message  Message to be logged
+     * @param  array   $add      Information to be atteched to the message
+     * @param  array   $category Category of the message
+     * @return void
+     *
+     */
     public static function info($message, $add = array(), $category = 'System')
     {
         $data['type'] = (php_sapi_name() == 'cli' ? 'console' : 'web');
