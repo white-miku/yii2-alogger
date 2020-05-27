@@ -15,7 +15,7 @@ Add the following code to the `repositories` section of your `composer.json` fil
     "type": "git"
 }
 ```
-and the fillowing line to the `require` section of your `composer.json` file:
+and the following line to the `require` section of your `composer.json` file:
 
 ```
 "white-miku/yii2-alogger": "*"
@@ -42,5 +42,5 @@ Once the extension is installed, you can use it:
 
 The messages will be logged with tag "System" and in JSON format:
 ```
-{"text":"Text and {variable} tobe logged as Info message,"data":{"type":"web","add":{"variable":"VARIABLE CONTENT"},"user":{"id":1,"login":"White Miku","ip":"USER's IP"},"url":"/index.php?r=controller%2Faction&parameter=1"}}
+{"text":"Text and {variable} to be logged as Info message,"data":{"type":"web","add":{"variable":"VARIABLE CONTENT"},"user":{"id":1,"login":"White Miku","ip":"USER's IP"},"url":"/index.php?r=controller%2Faction&parameter=1"}}
 ```
